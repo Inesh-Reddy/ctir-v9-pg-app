@@ -7,6 +7,7 @@ const intl = new Intl.NumberFormat("en-US", {
   currency: "USD",
 });
 
+//For statefullness of the component
 export default function Order() {
   const [pizzaType, setPizzaType] = useState("pepperoni");
   const [pizzaSize, setPizzaSize] = useState("M");
@@ -21,6 +22,7 @@ export default function Order() {
     );
   }
 
+  //To handle things that happen outside of the components main logic
   useEffect(() => {
     fetchPizzaTypes();
   }, []);
