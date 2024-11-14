@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 import Pizza from "./Pizza";
 
-// feel free to change en-US / USD to your locale
 const intl = new Intl.NumberFormat("en-US", {
   style: "currency",
   currency: "USD",
@@ -22,7 +21,7 @@ export default function Order() {
     );
   }
 
-  //To handle things that happen outside of the components main logic
+  //To handle, things that happen outside (side Effects) of the components main logic
   useEffect(() => {
     fetchPizzaTypes();
   }, []);
